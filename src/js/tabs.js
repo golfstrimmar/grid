@@ -27,7 +27,6 @@ dropTab.slideDown(200).addClass("act");
 })
 
 
-
 $(document).ready(function (e) {
   let titleTab = $(".tabsDep-title-js");
 
@@ -56,3 +55,5 @@ $(document).ready(function (e) {
     }
   });
 });
+
+ 

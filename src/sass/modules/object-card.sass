@@ -1,7 +1,5 @@
-
-
-//------.object-cards--------
-.object-cards
+//------.grid-cards--------
+.grid-cards
   // +alic
   // +jucs
   // +jucb
@@ -9,23 +7,102 @@
   // height:
   // flex: 0 1 100%
   // margin: 0 0 0 0
-  padding: 0 20px
+  // padding: 0 0 0 0
   // position: relative
   // display: none
   // display: flex
   display: grid
-  grid-gap: 20px
-  
-  grid-template-columns: repeat(auto-fill, minmax(750px,1fr))
+  grid-template-columns: 1fr 200px
+  // grid-template-rows:
+  grid-template-areas: "grid-cards aside"
+  // grid-area:
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    grid-template-columns: 1fr 
+    grid-template-areas: "aside" "grid-cards"
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.grid-cards__cards--------
+.grid-cards__cards
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  // display: grid
+  // grid-template-columns:
   // grid-template-rows:
   // grid-template-areas:
-  // grid-area:
+  grid-area: grid-cards
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.grid-cards__vidget--------
+.grid-cards__vidget
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  max-height: 400px
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  padding: 10px 15px
+  line-height: 140%
+  // position: relative
+  // display: none
+  // display: flex
+  // display: grid
+  // grid-template-columns:
+  // grid-template-rows:
+  // grid-template-areas:
+  +border(1px,darken($active, 50%))
+  +bg($active)
+  color: white
+  border-radius: 10px
+  grid-area: aside
+
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 20px 20px
+    // padding: 0 0 0 0
+
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    margin: 0 10px  20px
+    // padding: 0 0 0 0
+//-------------
+//------.object-cards--------
+.object-cards
+
+  padding: 0 20px
+  display: grid
+  grid-gap: 20px
+  grid-template-columns: repeat(auto-fill, minmax(750px,1fr))
   @media (max-width: 1199px)
     
-  @media (max-width: 767px)
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr))
-    // margin: 0 0 0 0
+  @media (max-width: 768px)
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr))
     padding: 0 10px
+  @media (max-width: 578px)
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr))
 //-------------
   
   //------.object-card--------
@@ -39,10 +116,12 @@
   grid-template-rows: auto auto auto auto auto 1fr auto auto
   grid-template-areas: "slider title price" "slider 1fr sub-price"  "slider adress adress" "slider info info" "slider properties properties"  "slider description description" "slider person person" "slider monitor monitor" 
   @media (max-width: 1199px)
-    grid-template-columns:  1fr
-    grid-template-rows: auto auto auto auto auto 1fr auto auto
+    grid-template-columns:  100%
+    grid-template-rows: 40% auto auto auto auto auto auto 1fr auto auto
     grid-template-areas: "slider" "title" 'price' "sub-price"  "adress" "info" " properties"  "description" "person" "monitor" 
+    min-height: 673px
   @media (max-width: 767px)
+
 //-------------
 //------.object-card__slader--------
 .object-card__slider
@@ -88,7 +167,7 @@
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
+    padding: 10px 0 10px 15px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -116,6 +195,7 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+    padding: 10px 0 10px 15px
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -135,11 +215,12 @@
   // position: relative
   // display: none
   // display: flex
+  grid-area: sub-price
   @media (max-width: 1199px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
-    // padding: 0 0 0 0
-  grid-area: sub-price
+    padding: 10px 0 10px 15px
+  
   @media (max-width: 767px)
     // flex: 0 1 100%
     // margin: 0 0 0 0
@@ -405,6 +486,8 @@
     // flex: 0 1 100%
     // margin: 0 0 0 0
     // padding: 0 0 0 0
+  @media (max-width: 578px)
+    display: none
 //-------------
 //------.object-card-person--------
 .object-card-person

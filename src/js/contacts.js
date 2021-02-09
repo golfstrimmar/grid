@@ -1,7 +1,6 @@
  
  
  
- 
  window.onload = () =>{
    // забираем данные с полей формы
    var inp_phone = document.querySelector("input[name=phone]");

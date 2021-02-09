@@ -8,12 +8,12 @@ import Plyr from "plyr";
 
 
 import './js/common'
-import "./js/header";
+import './js/header'
 import './js/modal'
 import './js/contacts'
 import './js/tabs'
 import './js/work'
-
+import "./js/slick.js"
 
 // bootstrap;
 // import "bootstrap";
@@ -26,10 +26,9 @@ import './js/work'
 // slick;
 // import "slick-carousel";
 import "./js/mySlick.js";
-import "./js/slick.js";
 import './css/slick.css';
 
-// import "./js/plyr.js";
+import "./js/plyr.js";
 import './css/fonts.css'
 import './css/plyr.css';
 
