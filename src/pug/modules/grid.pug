@@ -1,0 +1,141 @@
+//- .grid
+//-   .grid__item.grid__item--1 1 
+//-   .grid__item.grid__item--2 2 
+//-   .grid__item.grid__item--3 3
+//-   .grid__item.grid__item--4 4
+//-   .grid__item.grid__item--5 5
+//-   .grid__item.grid__item--6 6
+//-   .grid__item.grid__item--7 7
+//-   .grid__item.grid__item--8 8
+//-   .grid__item.grid__item--9 9
+//-   .grid__item.grid__item--10 10
+//-   .grid__item.grid__item--11 11
+ 
+//- .grid-alignment 
+//-   .grid-alignment__item.grid-alignment__item--1 1---Lorem ipsum dolor sit amet.
+//-   .grid-alignment__item.grid-alignment__item--2 2---Lorem ipsum dolor sit amet.
+//-   .grid-alignment__item.grid-alignment__item--3 3---Lorem ipsum dolor sit amet.
+
+//- .nesting
+//-   .nesting__item.nesting__item--1 1
+//-   .nesting__item.nesting__item--2 2
+//-   .nesting__item.nesting__item--3 3
+//-   .nesting__item.nesting__item--4 4
+//-   .nesting-1.nesting__item--5
+//-       .nesting__item.nesting__item--6 label
+//-       .nesting__item.nesting__item--7 input
+//-       .nesting__item.nesting__item--8 label
+//-       .nesting__item.nesting__item--9 input
+//-   //- .nesting__item.nesting__item--10  10
+
+
+//- .grid
+//-   .grid__item.grid__item--1 1 
+//-   .grid__item.grid__item--2 2 
+//-   .grid__item.grid__item--3 3
+//-   .grid__item.grid__item--4 4
+//-   .grid__item.grid__item--5 5
+//-   .grid__item.grid__item--6 6
+//-   .grid__item.grid__item--7 7
+//-   .grid__item.grid__item--8 8
+//-   .grid__item.grid__item--9 9
+//-   .grid__item.grid__item--10 10
+//-   .grid__item.grid__item--11 11
+
+//- body.container
+//-   header.element.element-1  header
+//-   nav.element.element-2 menu<br>menu<br>menu<br>menu<br>menu<br>menu<br>menu<br>menu<br>menu<br>menu<br>
+//-   aside.element.element-3 aside
+//-   main.content
+//-     .element.element-4  content
+//-     .element.element-5 content  content content content content content
+//-   footer.element.element-6  footer
+
+//- header Шапка сайта
+//- ul.menu
+//-   - 
+//-     items = [
+//-         { title: "Инфоормация ",icon:"icon-desktop_mac" },
+//-         { title: "Платежи  ",icon:"icon-monetization_on"},
+//-         { title: "Видео ",icon:"icon-camera_roll"},
+//-         {  title: "Пользователи ",icon:"icon-people_outline"},
+//-         { title: "Календарь ",icon:"icon-calendar"},
+//-     ]
+
+//-   each item in items
+//-     li.menu__item
+//-       a.nemu__link(href="#!")
+//-         i.menu__icon(class=item.icon)
+//-         span.menu__text=item.title
+
+//- main Основной контент
+
+//- aside Боковая колонка
+
+//- footer Подвал
+.slider
+          .slider__arrows
+            i.slider__arrow.slider__arrow_prev.icon-chevron-left
+            i.slider__arrow.slider__arrow_next.icon-chevron-right
+          ul.slider__body.slider-js
+            - 
+              slides = [
+                  {  img:"./assets/img/grid/img-1.webp"},
+                  { img:"./assets/img/grid/img-2.webp"},
+                  {  img:"./assets/img/grid/img-3.webp"},
+                  {  img:"./assets/img/grid/img-4.webp"},
+                  {  img:"./assets/img/grid/img-5.webp"},
+              ]
+            each item in slides
+              li.slider__item(style=`background-image: url(${item.img})`)
+
+//- .object-cards
+//-       .object-card
+//-         .object-card__slider.slider
+          
+//-           .slider__arrows
+//-             i.slider__arrow.slider__arrow_prev.icon-chevron-left
+//-             i.slider__arrow.slider__arrow_next.icon-chevron-right
+//-           ul.slider__body.slider-js
+//-             - 
+//-               slides = [
+//-                   {  img:"./assets/img/grid/img-1.webp"},
+//-                   { img:"./assets/img/grid/img-2.webp"},
+//-                   {  img:"./assets/img/grid/img-3.webp"},
+//-                   {  img:"./assets/img/grid/img-4.webp"},
+//-                   {  img:"./assets/img/grid/img-5.webp"},
+//-               ]
+//-             each item in slides
+//-               li.slider__item(style=`background-image: url(${item.img})`)
+
+//-         .object-card__title 1-комнатная, 36м²
+//-         .object-card__price 14 900 000 ₽
+//-         .object-card__sub-price 108 285 ₽ за м²
+//-         .object-card__adress  Улица Серафимовича, 18
+//-         .object-card__info  13 этаж из 17
+//-         .object-card__properties.properties
+//-           .properties__property.property
+//-             .property__img.property__img--metro M
+//-             span.property__text Ленинский проспект
+//-           .properties__property.property
+//-             i.property__img.property__img--bus.icon-train
+//-             span.property__text.property__text--bus 5 мин.
+//-         .object-card__description Cдам ЛИЧHO уютную квартиру на 13 этаже с современным ремонтом, техникой и мебелью. Цена: 17000 руб. Адрес: улица Добролюбова 162/1 5 минут от метро Золотая Нива
+//-         .object-card__person.object-card-person
+//-           .object-card-person__avatar 
+//-           .object-card-person__title Ксения
+//-           .object-card-person__time 5 часов назад
+//-         .object-card__monitor.object-card-monitor
+//-           button.btn.btn--success.btn--success-icon.object-card-monitor__button(type="button") 
+//-             i.icon-phone.monitor-icon
+//-             span +7(000) 123423
+//-           button.btn.button--empty(type='button').object-card-monitor__like  
+//-             i.icon-heart1.monitor-icon
+//-             span В избранное
+//-           button.btn.button--empty(type='button').object-card-monitor__location
+//-             i.icon-location2.monitor-icon
+      
+
+
+
+

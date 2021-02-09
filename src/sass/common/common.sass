@@ -1,0 +1,214 @@
+
+  
+*
+  outline: 1px solid green
+  box-sizing: border-box
+
+
+.container
+  // outline: 1px solid #4164ff
+
+[class*="col-"]
+  padding: 0 0 0 0
+
+
+
+body
+  +bg(white)
+  font-family: 'Lato', sans-serif
+  font-weight: 500
+  font-size: 15px
+  line-height: 1
+  color: #181818
+.wrapper
+  overflow: hidden
+  min-height: 100vh
+
+
+
+.cover-link
+  width: 100%
+  display: block
+  // +absolute( 100%, 100%, 0,  0,  null,0,0)
+
+
+
+
+
+.ibg
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  img
+    display: none
+
+.bg
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+  img
+    width: 100%
+    height: 100%
+
+a
+  color: inherit
+  transition: all 0.2s ease-in-out
+  &:hover
+    color: darken($green, 50%)
+    cursor: pointer
+  // @include center();
+  // width: 100%;
+  // height: 100%
+
+  // &:hover
+  //   cursor: pointer
+  //   z-index: 5
+
+
+.lock
+  overflow: hidden
+.active
+  opacity: 1
+  visibility: visible
+  display: block
+
+
+
+
+.icon-rouble
+  margin: 0 0 0 5px
+button
+  display: block
+.hover
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    transform: scale(1.02)
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.3)
+
+
+
+
+
+.up_down_btn
+  position: fixed
+  background: -o-linear-gradient(357.31deg, #DEF1D7 0, #7AB764 100%)
+  background: linear-gradient(92.69deg, #DEF1D7, #7AB764)
+  right: 20px
+  bottom: 20px
+  padding: 7px
+  border-radius: 50%
+  cursor: pointer
+  display: none
+  z-index: 200
+  opacity: .5
+  transition: all 0.5s
+  color: white
+  font-size: 20px
+  font-weight: bold
+
+  &:hover
+    text-decoration: none
+    opacity: 1
+
+  &-show
+    display: block
+
+  &-disabled
+    pointer-events: none
+    cursor: default
+    opacity: 0
+
+  @media (min-width: 0px) and (max-width: 768px)
+    &
+      display: none
+
+
+
+
+
+.icon-like-green
+  color: #7ab764
+  font-size: 20px
+
+.icon-location-red
+  color: #F05650
+  font-size: 20px
+
+.icon-cross
+  color: #181818
+  font-size: 20px
+
+.icon-link
+  color: #181818
+  font-size: 20px
+
+
+
+
+.delete--lp
+  @media (max-width: 1199px)
+    display: none!important
+
+
+.delete--sm
+  @media (max-width: 767px)
+    display: none
+
+.delete--lp
+  @media (max-width: 1199px)
+    display: none
+
+.visible--sm
+  display: none!important
+  @media (max-width: 767px)
+    display: flex!important
+
+
+.visible--lp
+  display: none!important
+  @media (max-width: 1199px)
+    display: flex!important
+
+
+//--------------
+.margin-top-sm
+  @media (max-width: 767px)
+    margin-top: 20px!important
+//-------------
+//--------------
+.margin-top-lp
+
+  @media (min-width: 768px) and (max-width: 1199px)
+    margin-top: 20px!important
+// //-------------
+
+.close
+  display: none!important
+
+
+
+.scroll-block::-webkit-scrollbar-track
+  border-radius: 4px
+
+.scroll-block::-webkit-scrollbar
+  width: 10px
+
+.scroll-block::-webkit-scrollbar-thumb
+  border-radius: 4px
+  background: #f0f2f5
+
+.scroll-block:hover::-webkit-scrollbar-thumb
+  background: #ececec
+
+
+
+
+

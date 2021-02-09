@@ -1,0 +1,43 @@
+.slider
+  position: relative
+  height: 200px
+  
+.slick-slide
+  margin: 0 10px
+
+.slider__body
+  +pro
+
+.slider__item
+  +pro
+
+
+
+
+
+
+
+.slider__arrows
+  position: relative
+  +absolute( 100%, 30px, 50%,  0%,  null,0,-50%)
+  +alic
+
+.slider__arrow
+  +center
+  +absolute( 50px, 50px, 0%,  null,  null,null,null)
+  +bg(white)
+  border-radius: 50%
+  font-size: 22px
+  color: $dark-1
+  transition: all 0.2s ease-in-out
+  &:hover
+    cursor: pointer
+    +bg($salat)
+    color: $active
+
+.slider__arrow_prev
+  left: 40px
+.slider__arrow_next
+  right: 40px
+.slider__item
+  margin: 0 20px 0 0

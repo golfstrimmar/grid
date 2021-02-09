@@ -1,0 +1,42 @@
+import $ from 'jquery';
+import Plyr from "plyr";
+ 
+// ==============================================
+
+// import "mixitup";
+// import Bootstrap from 'bootstrap/dist/css/bootstrap.css'
+
+
+import './js/common'
+import "./js/header";
+import './js/modal'
+import './js/contacts'
+import './js/tabs'
+import './js/work'
+
+
+// bootstrap;
+// import "bootstrap";
+// import "popper.js";
+// import "bootstrap/js/dist/tab";
+// import "bootstrap/js/dist/button";
+// import "bootstrap/js/dist/collapse";
+
+
+// slick;
+// import "slick-carousel";
+import "./js/mySlick.js";
+import "./js/slick.js";
+import './css/slick.css';
+
+// import "./js/plyr.js";
+import './css/fonts.css'
+import './css/plyr.css';
+
+// import './css/main.css';
+
+
+// главный файл стилей
+import './sass/style.sass';
+
+

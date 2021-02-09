@@ -1,0 +1,321 @@
+//------.grid--------
+// .grid
+//   width:80%
+//   margin: 20px auto 0
+//   display: grid
+//   border: 1px solid darken(#ECECEC, 20%) 
+
+
+
+  // grid-template-columns: 1fr 2fr  3fr
+  // grid-template-columns: min-content 200px max-content
+  // grid-template-columns: 100px 200px minmax(100px,300px)
+  // grid-template-columns:  repeat(3, 1fr)
+  // grid-template-rows: repeat(4, 1fr)
+  // grid-template-columns:  repeat(12,[col] 1fr)
+  // grid-template-rows: repeat(8,[row] 1fr)
+  // grid-template-columns:  repeat(2, 1fr)
+  // grid-column-gap: 15px
+  // grid-row-gap: 15px
+//   grid-gap: 15px
+
+//   grid-template-columns: repeat(6,[col] 1fr)
+//   grid-template-rows:repeat(3,[row] 1fr)
+// //-------------
+
+
+//-------------
+//------.grid__item--1--------
+// .grid__item--1
+ 
+//   +bg(red)
+  // grid-column-start: 3
+  // grid-column-end: 4
+  // grid-row-start: 3
+  // grid-row-end: 4
+  // grid-column:3/4
+  // grid-row:1/3
+  // grid-area: 1/3/4/4
+  // grid-column:  col 1/span 4
+  // grid-row: row 3/row 9
+//   grid-column:  span 2
+//   // grid-row: row 1/row 1
+// //-------------
+// .grid__item--2
+//   +bg(green)
+//   grid-column:  span 2
+//   grid-row: span 2
+// //-------------
+// .grid__item--3
+//   +bg(blue)
+//   grid-column:  span 1
+//   grid-row: span 2
+// //-------------
+// .grid__item--4
+// .grid__item--5
+// .grid__item--6
+// .grid__item--7
+// .grid__item--8
+// .grid__item--9
+//   grid-column:  span 2
+
+// .grid__item--10
+//   grid-column:  span 2
+
+// .grid__item--11
+// //------.grid__item--------
+// .grid__item
+//   padding: 10px 20px
+//   border: 1px solid darken(#ECECEC, 20%) 
+
+
+
+
+
+// .grid-alignment
+//   width:80%
+//   height:100vh
+//   margin: 20px auto 0
+//   display: grid
+//   border: 1px solid darken(#ECECEC, 20%) 
+//   grid-gap: 15px
+//   // justify-content: space-evenly
+//   // align-content: space-evenly 
+//   grid-template-columns:  repeat(4, 1fr)
+//   grid-template-rows: repeat(4, 1fr)
+//   grid-auto-flow: row dense
+
+// .grid-alignment__item
+//   +bg(lighten(green,30%))
+//   // width: 150px
+//   // height: 50px
+//   border: 1px solid darken(#ECECEC, 20%)
+//   //   &:nth-of-type(2),&:nth-of-type(3)
+//   //     grid-column:  span 2
+//   // .grid-alignment__item--1
+//   //   // align-self: center
+//   //   // justify-self: center
+
+//   &:nth-of-type(2)
+//     order: 1 
+
+// // ---------------
+// .nesting
+//   display: grid
+//   grid-gap: 15px
+//   height:100vh
+//   border: 1px solid darken(#ECECEC, 20%) 
+//   grid-template-columns:  repeat(auto-fill, minmax(200px, auto))
+
+// .nesting__item
+//   border: 1px solid darken(#ECECEC, 20%)
+//   +bg(lighten(green,30%)) 
+// .nesting-1
+//   display: grid
+//   grid-gap: 10px
+//   // grid-template-columns:  repeat(4,auto)
+//   grid-template-columns:  1fr 5fr
+
+// .nesting__item--5
+//   grid-column: span 2
+
+// .grid
+//   width:80%
+//   margin: 20px auto 0
+//   display: grid
+//   grid-gap: 10px
+//   height: 100vh
+//   border: 1px solid darken(#ECECEC, 20%) 
+//   grid-template-columns:  repeat(auto-fit, minmax(100px, auto))
+
+// .grid__item
+//   border: 1px solid darken(#ECECEC, 20%)
+//   +bg(lighten(green,30%)) 
+
+
+// .wrapper
+//   display: grid
+//   grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px)
+//   grid-template-areas: "header header header" "nav main aside" "footer footer footer"
+
+// header
+//   grid-area: header
+  
+// nav
+//   grid-area: nav
+
+// aside
+//   grid-area: aside
+
+// main
+//   grid-area: main
+
+// footer
+//   grid-area: footer
+
+// ========================================
+
+//------.grid--------
+.grid 
+  max-width:  960px
+  display: grid
+  grid-template-columns: 1fr 250px
+  grid-template-rows: 150px auto 1fr  50px
+  margin: 0 auto
+  grid-template-areas: "header header " "menu  aside" "main  aside" "footer  footer"
+  @media (max-width: 1199px)
+    grid-template-columns:  150px 1fr auto
+    grid-template-rows:  auto 1fr  250px
+    grid-template-areas: "menu header header " "menu main aside" "menu  footer  footer" 
+  @media (max-width: 767px)
+    grid-template-columns:   1fr
+    grid-template-rows: auto auto 1fr auto auto 
+    grid-template-areas: "menu" "header" " main " "aside" "footer" 
+//-------------
+
+//------header--------
+header
+  padding: 10px 15px
+  +bg(#1DE9B6)
+  border-bottom: 1px solid #BDBDBD
+  // grid-column:  1/span 3
+  grid-area: header
+  @media (max-width: 1199px)
+  @media (max-width: 767px)
+//-------------
+
+//------.menu
+  // --------
+.menu
+  padding: 15px
+  // grid-column:  1
+  // grid-row: 2
+  +bg( #00E676)
+  grid-area: menu
+  border-bottom: 1px solid #BDBDBD
+  +jucb
+  @media (max-width: 1199px)
+    +fdc
+    +alic
+    +jucs
+  @media (max-width: 767px)
+    flex-direction: row
+    +jucb 
+
+//-------------
+
+//------main--------
+main
+  padding: 20px 15px
+  +bg( #00B8D4)
+  border-bottom: 1px solid #BDBDBD
+  // grid-column: 1/span2
+  // grid-row: 3
+  grid-area: main
+  @media (max-width: 1199px)
+  @media (max-width: 767px)
+//-------------
+
+//------asige--------
+aside
+  padding: 20px 15px
+  +bg( #00897B)
+  border-bottom: 1px solid #BDBDBD
+  // grid-column: 2
+  // grid-row: 2/span 2
+  grid-area: aside
+  @media (max-width: 1199px)
+  @media (max-width: 767px)
+//-------------
+//------footer--------
+footer
+  padding: 20px 15px
+  +bg( #004D40)
+  border-bottom: 1px solid #BDBDBD
+  // grid-column:  span 3
+  // grid-row:4
+  grid-area: footer
+  @media (max-width: 1199px)
+  @media (max-width: 767px)
+//-------------
+
+//------.nemu__link--------
+.nemu__link
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+    +center
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.menu__icon--------
+.menu__icon
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  margin: 0 10px 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // flex: 0 1 100%
+    margin: 0 0 0 0
+    // padding: 0 0 0 0
+  @media (max-width: 767px)
+    // flex: 0 1 100%
+    // margin: 0 0 0 0
+    // padding: 0 0 0 0
+//-------------
+//------.menu__text--------
+.menu__text
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    display: none
+//-------------
+
+//------.menu__item--------
+.menu__item
+  // +alic
+  // +jucs
+  // +jucb
+  // width:
+  // height:
+  // flex: 0 1 100%
+  // margin: 0 0 0 0
+  // padding: 0 0 0 0
+  // position: relative
+  // display: none
+  // display: flex
+  @media (max-width: 1199px)
+    // display: grid
+    // justify-content: center
+
+//-------------
