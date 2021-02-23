@@ -4,9 +4,8 @@
 .slider__body,.slider__item
   +pro
 
-.slider__item
-  border-top-left-radius: 10px
-  border-bottom-left-radius: 10px
+
+
 
 
 .slider__arrows
@@ -33,35 +32,38 @@
   right: 10px
 
 
-  
-.slick-dots li:not(.slick-active)
-    display: none
-.slick-active
-    z-index: 2
-    display: inline-flex
-    +absolute( 71px, 38px, null, null, 10px,0,0)
+.slider
+  .slick-dots
+    +absolute( 71px, 38px, auto, auto, 10px,0,0)
     bottom:  10px
+  .slick-dots li:not(.slick-active)
+      display: none
+  .slick-active
+      z-index: 2
+      display: inline-block
+      // +absolute( 71px, 38px, 0, 0, 10px,0,0)
+      // bottom:  10px
 
 
-.slick-dots-current
-    font-weight: normal
-    font-size: 15px
-    color: $white
-    margin: 0 0 0 
-.slick-dots-total
-    font-weight: normal
-    color: $white
-    font-size: 15px
-    margin: 0 0 0 
-.slick-dots-separator
-    color: white
-    font-size: 15px
-    font-weight: normal
-    margin: 0 5px
-.slick-dots-button
-    +center 
-    background: transparent
-    width: 71px
-    height: 38px
-    border-radius: 10px
-    background: rgba(24,24,24, .6)
+  .slick-dots-current
+      font-weight: normal
+      font-size: 15px
+      color: $white
+      margin: 0 0 0 
+  .slick-dots-total
+      font-weight: normal
+      color: $white
+      font-size: 15px
+      margin: 0 0 0 
+  .slick-dots-separator
+      color: white
+      font-size: 15px
+      font-weight: normal
+      margin: 0 5px
+  .slick-dots-button
+      +center 
+      background: transparent
+      width: 71px
+      height: 38px
+      border-radius: 10px
+      background: rgba(24,24,24, .6)
